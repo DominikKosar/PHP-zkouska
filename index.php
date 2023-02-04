@@ -3,14 +3,14 @@
 <?php include "head.php"; ?>
 
 <body>
-    
+
     <header>
         <h1>Úvodní strana</h1>
     </header>
     <main>
         <h2>Nadpis</h2>
         <p>
-            Text. Text.Text. 
+            Text. Text.Text.
             Text.Text. Text.
             Text. Text.
         </p>
@@ -24,7 +24,7 @@
         include "footer.php";
     
     ?>
-    
+
     <?php       
 //dat typy
 ////        $jmeno = "Dominik";
@@ -197,42 +197,156 @@
 //        echo $zamestnanec;
 //        echo "<br>";
 //    }
-    //procvičování-cyklu, podmínky, switche
-    $mujJazyk = "Python";
-    if ($mujJazyk === "PHP"){
-        echo "Učím se php";
-    } elseif ($mujJazyk === "JS"){
-        echo "Učím se " . $mujJazyk;
-    } else {
-        echo "Učim se jazyk, ale nevím, jak se jmenuje";
+//    //procvičování-cyklu, podmínky, switche
+//    $mujJazyk = "Python";
+//    if ($mujJazyk === "PHP"){
+//        echo "Učím se php";
+//    } elseif ($mujJazyk === "JS"){
+//        echo "Učím se " . $mujJazyk;
+//    } else {
+//        echo "Učim se jazyk, ale nevím, jak se jmenuje";
+//    }
+//    
+//    echo "<br>";
+//    
+//    for ($i = 0; $i <= 10; $i++){
+//        echo $i;
+//        echo "<br>";
+//    }
+//    
+//    $jazyk = "HTML";
+//    switch ($jazyk){
+//        case "PHP":
+//            echo "Mám rád PHP";
+//            break;
+//        case "JS":
+//            echo "Mám rád " . $jazyk;
+//            break;
+//        case "HTML":
+//            echo "Mám rád " . $jazyk;
+//            break;
+//        default:
+//            echo "Chyba";
+//            break;
+//    }
+    
+    //funkce
+    
+    /*function pozdrav(){
+        echo "Ahoj hráči";
+        echo "<br>";
+    };
+    
+    function skore(){
+        echo "Tvoje skóre je: " . (20 + 30);
     }
     
-    echo "<br>";
+    function init(){
+        pozdrav();
+        skore();
+    }
     
-    for ($i = 0; $i <= 10; $i++){
-        echo $i;
+    init();*/
+
+    //funkce s parametrem
+    /*function pozdrav($jmeno){
+        echo "Ahoj ".$jmeno;
         echo "<br>";
     }
-    
-    $jazyk = "HTML";
-    switch ($jazyk){
-        case "PHP":
-            echo "Mám rád PHP";
-            break;
-        case "JS":
-            echo "Mám rád " . $jazyk;
-            break;
-        case "HTML":
-            echo "Mám rád " . $jazyk;
-            break;
-        default:
-            echo "Chyba";
-            break;
+
+    pozdrav("David");
+    pozdrav("Petr");
+    pozdrav("Robert");
+    pozdrav("Pavel");
+    pozdrav("Lukáš");
+    function calculator($n1, $n2){
+        $vysledek = $n1 * $n2;
+        echo $vysledek;
+        echo "<br>";
     }
-    
+
+    calculator(10, 30);
+    calculator(100, 40);
+    calculator(510, 80);*/
+
+    //funkce a return
+    /*function pozdrav(){
+        echo "Ahoj, já jsem David";
+    }
+
+    pozdrav();
+    echo "<br>";
+
+    function vek($rokNarozeni){
+        return 2023 - $rokNarozeni;
+    }
+
+    $vysledek = vek(2000);
+
+    if ($vysledek >= 18) {
+        echo "Je dospělý/á";
+    } else {
+        echo "Není dospělý/á";
+    }*/
+
+    //global scope a local scope
+    /*$x = "venku"; //global scope - globální prostředí
+
+    function zmenaX(){
+        global $x;
+        $x = "uvnitř";  //local scope - lokální prostředí
+    }
+
+    echo $x;
+    echo "<br>";
+
+    zmenaX();
+    echo $x;*/
+
+    //Konstanty
+    /*$vek = 30;
+    $vek = 20;
+
+    echo $vek;
+    echo "<br>";
+
+    define("rokNarozeni", 1986);    //první způsob zapsání
+    echo rokNarozeni;
+
+    echo "<br>";
+
+    const mojeKonstanta = "David";  //druhý způsob zapsání
+    echo mojeKonstanta;*/
+
+    //procvičování
+    function rozdil(){
+        return 5 - 3;
+    }
+
+    $vysledek1 = rozdil();
+    echo $vysledek1;
+    echo "<br>";
+    $vysledek2 = rozdil();
+    echo $vysledek2;
+    echo "<br>";
+    $vysledek3 = rozdil();
+    echo $vysledek3;
+    echo "<br>";
+
+    function soucet($num1, $num2){
+        echo $num1 + $num2;
+        echo "<br>";
+    }
+
+    soucet(5, 8);
+    soucet(10, 15);
+    soucet(100, 200);
+
+
     ?>
 
 
-  <script src=""></script>
+    <script src=""></script>
 </body>
+
 </html>
