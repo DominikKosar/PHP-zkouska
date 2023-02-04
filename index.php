@@ -319,7 +319,7 @@
     echo mojeKonstanta;*/
 
     //procvičování
-    function rozdil(){
+    /*function rozdil(){
         return 5 - 3;
     }
 
@@ -340,9 +340,79 @@
 
     soucet(5, 8);
     soucet(10, 15);
-    soucet(100, 200);
+    soucet(100, 200);*/
+
+    //matematické funkce
+    /*echo pow(2, 4); //2 na 4
+    echo "<br>";
+
+    echo rand(); //náhodné číslo
+    echo "<br>";
+
+    echo rand(90, 100); //náhodné od 90 do 100
+    echo "<br>";
+
+    echo sqrt(25); //druhá odmocnina
+    echo "<br>";
+
+    echo ceil(4.1); //zaokrouhlení nahoru
+    echo "<br>";
+
+    echo floor(3.8);   //zaokrouhlení dolů
+    echo "<br>";
+
+    echo round(2.4);    //zaokrouhlení běžné*/
+
+    //string funkce
+    /*$string = "Ahoj";
+
+    echo strlen($string);
+    echo "<br>";
+
+    echo strtoupper($string);
+    echo "<br>";
+
+    echo strtolower($string);
+    echo "<br>";*/
+
+    //pole funkce
+    /*$seznam = [200, 100, 900, 632, 111, 52];
+
+    echo max($seznam);
+    echo "<br>";
+
+    echo min($seznam);
+    echo "<br>";
+
+    sort ($seznam);
+    print_r ($seznam);*/
+
+    //procvičování
+    echo pow(2, 4);
+    echo "<br>";
+    echo sqrt(169);
+    echo "<br>";
+
+    echo strtolower("AHOJ");
+    echo "<br>";
+    echo strtoupper("ahoj");
+    echo "<br>";
+
+    $pole = [5, 6, 8, 10, 15, 6];
+    echo sort($pole);
+    echo "<br>";
+
+    print_r($pole);
+    echo "<br>";
+    
+    for ($i = 0; $i < 6; $i++){
+        echo $pole[$i];
+        echo "<br>";
+    }
 
 
+
+    
     ?>
 
 
