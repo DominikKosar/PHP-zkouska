@@ -1,12 +1,12 @@
 <?php
 
-    if (isset($_GET["submit"])){
+    if (isset($_POST["submit"])){
 
         $name = ["David", "Marek", "Daniel", "Tereza"];
         $minimum = 3;
         $maximum = 10;
-        $username = $_GET["username"];
-        $password = $_GET["password"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
 
         echo "Ahoj " . $username;
         echo "<br>";
