@@ -388,7 +388,7 @@
     print_r ($seznam);*/
 
     //procvičování
-    echo pow(2, 4);
+    /*echo pow(2, 4);
     echo "<br>";
     echo sqrt(169);
     echo "<br>";
@@ -408,7 +408,10 @@
     for ($i = 0; $i < 6; $i++){
         echo $pole[$i];
         echo "<br>";
-    }
+    }*/
+
+    //tvorba formuláře a jeho odeslání
+    
 
 
 
