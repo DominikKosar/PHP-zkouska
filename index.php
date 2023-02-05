@@ -410,8 +410,7 @@
         echo "<br>";
     }*/
 
-    //tvorba formuláře a jeho odeslání
-    
+
 
 
 
