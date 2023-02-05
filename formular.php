@@ -1,7 +1,12 @@
 <?php
 
     if (isset($_POST["submit"])){
-    echo "Formulář funguje";
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        echo "Ahoj " . $username;
+        echo "<br>";
+        echo "Tvé heslo je: " . $password;
     }
 
 ?>
@@ -18,8 +23,8 @@
 <body>
     <form action="formular.php" method="post">
 
-        <input type="text" placeholder="Uživatelské jméno"><br>
-        <input type="password" placeholder="Heslo"><br>
+        <input type="text" name="username" placeholder="Uživatelské jméno"><br>
+        <input type="password" name="password" placeholder="Heslo"><br>
         <input type="submit" name="submit" value="Odeslat">
 
     </form>
