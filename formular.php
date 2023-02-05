@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="">
+
+        <input type="text" placeholder="Uživatelské jméno"><br>
+        <input type="password" placeholder="Heslo"><br>
+        <input type="submit" value="Odeslat">
+
+    </form>
 </body>
 </html>
