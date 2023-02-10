@@ -12,7 +12,14 @@
     } else {
         echo "Něco nám chybí";
     }
+    //připojení do databáze
+    $connection = mysqli_connect("localhost", "root", "", "loginapplication");
 
+    if ($connection) {
+        echo "Jsme propojeni s databází";
+    } else {
+        echo "Ou, něco se pokazilo";
+    }
     
 
     }
