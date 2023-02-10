@@ -25,13 +25,7 @@
         include "footer.php";
     
     ?>
-    <form action="formular.php" method="post">
-
-        <input type="text" name="username" placeholder="Uživatelské jméno"><br>
-        <input type="password" name="password" placeholder="Heslo"><br>
-        <input type="submit" name="submit" value="Odeslat">
-
-    </form>
+    
 
     <?php       
 //dat typy
