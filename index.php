@@ -4,9 +4,16 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-    echo $username;
-    echo "<br>";
-    echo $password;
+    //ověření, zda username a password existují = odeslala data z formuláře
+    if ($username && $password) {
+        echo $username;
+        echo "<br>";
+        echo $password;
+    } else {
+        echo "Něco nám chybí";
+    }
+
+    
 
     }
 
@@ -16,31 +23,11 @@
 
 <!DOCTYPE html>
 <html lang="">
-<?php include "head.php"; ?>
+
 
 <body>
 
-    <header>
-        <h1>Úvodní strana</h1>
-    </header>
-    <main>
-        <h2>Nadpis</h2>
-        <p>
-            Text. Text.Text.
-            Text.Text. Text.
-            Text. Text.
-        </p>
-    </main>
-
-    <?php
     
-        include_once "footer.php";
-        include "footer.php";
-        include "footer.php";
-        include "footer.php";
-        include "footer.php";
-    
-    ?>
     <form action="index.php" method="post">
         <input type="text" name="username" placeholder="Uživatelské jméno">
         <br>
