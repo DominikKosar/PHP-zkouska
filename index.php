@@ -18,8 +18,18 @@
     if ($connection) {
         echo "Jsme propojeni s databází";
     } else {
-        echo "Ou, něco se pokazilo";
+        die("Ou, něco se pokazilo");
     }
+
+    $query = "INSERT INTO users(username, password) VALUES('$username','$password')";
+
+    $result = mysqli_query($connection, $query);
+
+    if(!$result){
+        die("Dotaz do databáze selhal".mysqli_error());
+    }
+
+
     
 
     }
