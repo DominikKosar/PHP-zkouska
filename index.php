@@ -1,6 +1,14 @@
 <?php
 
-    if (isset($_POST["submit"])) {
+    /*
+        CRUD
+        C - create (vytvoř)
+        R - read (přečti)
+        U - update (uprav stávající)
+        D - delete (vymaž)
+    */
+
+
         $username = $_POST["username"];
         $password = $_POST["password"];
 
@@ -29,10 +37,6 @@
         die("Dotaz do databáze selhal".mysqli_error());
     }
 
-
-    
-
-    }
 
 
 ?>
