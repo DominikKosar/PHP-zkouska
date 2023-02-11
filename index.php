@@ -29,7 +29,7 @@
         die("Ou, něco se pokazilo");
     }
 
-    $query = "INSERT INTO users(username, password) VALUES('$username','$password')";
+    $query = "SELECT * FROM users";
 
     $result = mysqli_query($connection, $query);
 
@@ -52,6 +52,12 @@
 
 <body>
 
+    <pre>
+        Toto  je  předformátovaný   text.
+    </pre>
+    <p>
+        Toto  je  předformátovaný   text.
+    </p>
     
     <form action="index.php" method="post">
         <input type="text" name="username" placeholder="Uživatelské jméno">
@@ -60,6 +66,16 @@
         <br>
         <input type="submit" name="submit" value="Odeslat">    
     </form>
+
+    <?php
+        
+        while($row = mysqli_fetch_assoc($result)){
+            echo "<pre>";
+            print_r($row);
+            echo "<pre>";
+        }
+
+    ?>
 
     <?php       
 //dat typy
