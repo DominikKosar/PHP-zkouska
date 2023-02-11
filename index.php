@@ -21,7 +21,7 @@
         echo "Něco nám chybí";
     }
     
-
+    include "mysql/db.php";
     $query = "SELECT * FROM users";
 
     $result = mysqli_query($connection, $query);
@@ -29,9 +29,6 @@
     if(!$result){
         die("Dotaz do databáze selhal".mysqli_error());
     }
-
-
-    
 
     }
 
