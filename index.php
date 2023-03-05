@@ -27,7 +27,7 @@
     $result = mysqli_query($connection, $query);
 
     if(!$result){
-        die("Dotaz do databáze selhal".mysqli_error());
+        die("Dotaz do databáze selhal".mysqli_connect_error());
     }
 
     }
