@@ -1,7 +1,7 @@
 <?php
     //připojení do databáze
     include "mysql/db.php";
-    
+    Connection();
     //výběr všech dat z databáze
     $query = "SELECT * FROM users";
 
@@ -13,21 +13,11 @@
 
     //načtení dat z formuláře a dotaz do databáze
     if(isset($_POST["submit"])){
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        $id = $_POST["id"];
-
-        $query2 = "UPDATE users SET username = '$username', 
-        password = '$password' WHERE id = $id ";
-
-        $result2 = mysqli_query($connection, $query2);
-        
-        if(!$result2){
-            die("Query selhalo".mysqli_connect_error());
-        }
+        UpdateFunction();
     }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
