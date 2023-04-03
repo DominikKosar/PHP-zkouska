@@ -1,3 +1,33 @@
+<?php
+    //připojení do databáze
+    include "mysql/db.php";
+    
+    //výběr všech dat z databáze
+    $query = "SELECT * FROM users";
+
+    $result = mysqli_query($connection, $query);
+
+    if(!$result){
+        die("Dotaz do databáze selhal".mysqli_connect_error());
+    }
+
+    //načtení dat z formuláře a dotaz do databáze
+    if(isset($_POST["submit"])){
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $id = $_POST["id"];
+
+        $query2 = "UPDATE users SET username = '$username', 
+        password = '$password' WHERE id = $id ";
+
+        $result2 = mysqli_query($connection, $query2);
+        
+        if(!$result2){
+            die("Query selhalo".mysqli_connect_error());
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +37,20 @@
     <title>Document</title>
 </head>
 <body>
-<form action="index.php" method="post">
+<form action="update.php" method="post">
         <input type="text" name="username" placeholder="Uživatelské jméno">
         <br>
         <input type="password" name="password" placeholder="heslo">
         <br>
+        <select name="id" id="">
+            <?php
+            while($row = mysqli_fetch_assoc($result)){
+                $id = $row["id"];
+                echo "<option value='$id'>$id</option>";
+            }
+            ?>
+
+        </select>
         <input type="submit" name="submit" value="Odeslat">    
     </form>
 </body>
