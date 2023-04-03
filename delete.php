@@ -1,19 +1,20 @@
 <?php
-    //připojení do databáze
-    include "mysql/db.php";
+    // načtení funkcí a napojení na databázi
+    include("mysql/db.php");
     Connection();
+
     //výběr všech dat z databáze
     $query = "SELECT * FROM users";
 
     $result = mysqli_query($connection, $query);
 
-    if(!$result){
-        die("Dotaz do databáze selhal".mysqli_connect_error());
-    }
-
-    //načtení dat z formuláře a dotaz do databáze
+    /*kontrola zda byl formulář 
+    odeslán a pokud ano, tak 
+    podle údajů z formuláře 
+    vymazat příslušné id*/
+    
     if(isset($_POST["submit"])){
-        UpdateFunction();
+        DeleteFunction();
     }
 
 ?>
@@ -27,7 +28,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="update.php" method="post">
+    <form action="delete.php" method="post">
         <input type="text" name="username" placeholder="Uživatelské jméno">
         <br>
         <input type="password" name="password" placeholder="heslo">
@@ -41,6 +42,7 @@
             ?>
 
         </select>
+
         <input type="submit" name="submit" value="Odeslat">    
     </form>
 </body>
