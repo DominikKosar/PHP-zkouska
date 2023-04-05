@@ -4,10 +4,9 @@
     Connection();
 
     //výběr všech dat z databáze
-    $query = "SELECT * FROM users";
+    Selectfunction();
 
-    $result = mysqli_query($connection, $query);
-
+    
     /*kontrola zda byl formulář 
     odeslán a pokud ano, tak 
     podle údajů z formuláře 

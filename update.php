@@ -3,10 +3,8 @@
     include "mysql/db.php";
     Connection();
     //výběr všech dat z databáze
-    $query = "SELECT * FROM users";
-
-    $result = mysqli_query($connection, $query);
-
+    Selectfunction();
+    
     //načtení dat z formuláře a dotaz do databáze
     if(isset($_POST["submit"])){
         UpdateFunction();

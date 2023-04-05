@@ -32,6 +32,20 @@
 
     }
 
+    function Selectfunction(){
+        global $connection;
+        global $result;
+        $query = "SELECT * FROM users";
+
+        $result = mysqli_query($connection, $query);
+        if(!$result){
+            die("Nepodařilo se 
+            vybrat data z 
+            databáze");
+        }
+
+    }
+
     function UpdateFunction(){
         global $connection;
         $username = $_POST["username"];
