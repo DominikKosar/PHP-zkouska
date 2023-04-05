@@ -1,36 +1,14 @@
 <?php
 
-    /*
-        CRUD
-        C - create (vytvoř)
-        R - read (přečti)
-        U - update (uprav stávající)
-        D - delete (vymaž)
-    */
-
-    if (isset($_POST["submit"])) {
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-
-    //ověření, zda username a password existují = odeslala data z formuláře
-    if ($username && $password) {
-        echo $username;
-        echo "<br>";
-        echo $password;
-    } else {
-        echo "Něco nám chybí";
-    }
     
     include "mysql/db.php";
-    $query = "SELECT * FROM users";
+    Connection();
 
-    $result = mysqli_query($connection, $query);
-
-    if(!$result){
-        die("Dotaz do databáze selhal".mysqli_connect_error());
+    if(isset($_POST["submit"])){
+        Addfunction();
     }
 
-    }
+    
 
 
 ?>
@@ -41,13 +19,6 @@
 
 
 <body>
-
-    <pre>
-        Toto  je  předformátovaný   text.
-    </pre>
-    <p>
-        Toto  je  předformátovaný   text.
-    </p>
     
     <form action="index.php" method="post">
         <input type="text" name="username" placeholder="Uživatelské jméno">
@@ -56,16 +27,6 @@
         <br>
         <input type="submit" name="submit" value="Odeslat">    
     </form>
-
-    <?php
-        
-        while($row = mysqli_fetch_assoc($result)){
-            echo "<pre>";
-            print_r($row);
-            echo "<pre>";
-        }
-
-    ?>
 
     <?php       
 //dat typy

@@ -11,6 +11,27 @@
         die("Ou, něco se pokazilo");
     }
     }
+
+    function Addfunction(){
+        global $connection;
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $query = "INSERT INTO 
+        users(username,password) 
+        VALUE('$username','
+        $password')";
+
+        $result = mysqli_query(
+            $connection,$query);
+
+        if(!$result){
+            die("Nepodařilo se data
+            zapsta do databáze");
+        }
+
+    }
+
     function UpdateFunction(){
         global $connection;
         $username = $_POST["username"];

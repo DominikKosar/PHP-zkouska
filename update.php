@@ -7,10 +7,6 @@
 
     $result = mysqli_query($connection, $query);
 
-    if(!$result){
-        die("Dotaz do databáze selhal".mysqli_connect_error());
-    }
-
     //načtení dat z formuláře a dotaz do databáze
     if(isset($_POST["submit"])){
         UpdateFunction();
