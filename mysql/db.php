@@ -17,14 +17,18 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
         
+        //Escapování inputů
         $username = mysqli_real_escape_string($connection, $username);
         $password = mysqli_real_escape_string($connection, $password);
 
+        //hashování hesla
+        $hashFormat = "$2y$10$";
+        $salt = "u9YPT1kh13fEPGlMmkWrID";
+        $hashFormat_salt = $hashFormat.$salt; 
+        $password = crypt($password, $hashFormat_salt);
 
-        $query = "INSERT INTO 
-        users(username,password) 
-        VALUE('$username','
-        $password')";
+        //Vložení dat do databáze
+        $query = "INSERT INTO users(username,password) VALUE('$username','$password')";
 
         $result = mysqli_query(
             $connection,$query);
