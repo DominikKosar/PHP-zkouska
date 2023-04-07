@@ -16,6 +16,10 @@
         global $connection;
         $username = $_POST["username"];
         $password = $_POST["password"];
+        
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
+
 
         $query = "INSERT INTO 
         users(username,password) 
@@ -52,6 +56,10 @@
         $password = $_POST["password"];
         $id = $_POST["id"];
 
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
+        $id = mysqli_real_escape_string($connection, $id);
+
         $query2 = "UPDATE users SET username = '$username', 
         password = '$password' WHERE id = '$id' ";
 
@@ -66,6 +74,10 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
         $id = $_POST["id"];
+
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
+        $id = mysqli_real_escape_string($connection, $id);
 
         $query2 = "DELETE FROM  users WHERE
          id = '$id'";

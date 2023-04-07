@@ -9,7 +9,9 @@
 <body>
     <!-- SQL injection -->
     <?php
-        
+    echo 'O\'Reilly';
+    echo "<a href=\"#odkaz\">Text odkazu</a>";
+
     ?>
     
 </body>
