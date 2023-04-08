@@ -1,3 +1,9 @@
+<?php
+
+    print_r($_GET);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php
+
+        $id = 73;
+
+
+
+    ?>
+    <a href="get.php?id=<?php echo $id;?>&source=google">Klikni zde</a>
 </body>
 </html>
