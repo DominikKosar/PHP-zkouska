@@ -13,13 +13,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-
-        $id = 73;
-
-
-
-    ?>
-    <a href="get.php?id=<?php echo $id;?>&source=google">Klikni zde</a>
+    <form action="get.php" method="get">
+        <input type="text" name="username"><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Odeslat">
+    </form>
 </body>
 </html>
