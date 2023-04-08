@@ -1,6 +1,8 @@
 <?php
 
-    print_r($_GET);
+    if(isset($_POST["submit"])){
+        echo $_POST["username"];
+    }
 
 ?>
 
@@ -13,10 +15,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="get.php" method="get">
+    <form action="get.php" method="post">
         <input type="text" name="username"><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Odeslat">
+        <input type="submit" name="submit" value="Odeslat">
     </form>
 </body>
 </html>
