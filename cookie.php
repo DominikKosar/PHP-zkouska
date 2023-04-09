@@ -6,6 +6,7 @@
 
     setcookie($name, $value, $expiration);
 
+
     //echo time();    //od roku 1970
 
 ?>
@@ -20,5 +21,17 @@
 </head>
 <body>
     <h1>Ucim se cookies</h1>
+
+    <?php
+
+    if(isset($_COOKIE["MojeCookies"])){
+        $visitor = $_COOKIE["MojeCookies"];
+        echo $_COOKIE["MojeCookies"];
+    } else{
+        $visitor = "";
+    }
+
+
+    ?>
 </body>
 </html>
