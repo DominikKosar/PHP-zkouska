@@ -7,7 +7,7 @@
     setcookie($name, $value, $expiration);
 
 
-    //echo time();    //od roku 1970
+    //echo time();    //time() --> od roku 1970
 
 ?>
 
