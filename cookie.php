@@ -1,4 +1,14 @@
+<?php
 
+    $name = "MojeCookies";
+    $value = 183;
+    $expiration = time() + (60*60*24*7);   //týden
+
+    setcookie($name, $value, $expiration);
+
+    //echo time();    //od roku 1970
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
